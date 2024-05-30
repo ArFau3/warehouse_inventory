@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tambahkan link tailwindnya -->
+    <!-- https://tailwindcss.com/docs/guides/laravel -->
+    @vite('resources/css/app.css')
+    <!-- ========================== -->
     <title>@yield('title', 'Warehouse Inventory')</title>
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 </head>
@@ -30,7 +34,9 @@
     <main class="container mx-auto my-8">
         @yield('content')
     </main>
-    <footer class="bg-gray-800 text-white py-4">
+    <!-- atur footer tetap di bawah w-full fixed bottom-0 -->
+    <footer class="bg-gray-800 text-white py-4 w-full fixed bottom-0">
+    <!-- ================================================ -->
         <div class="container mx-auto text-center">
             &copy; {{ date('Y') }} Warehouse Inventory
         </div>
